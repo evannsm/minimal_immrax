@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# What you pip install
+name = "immrax"
+version = "0.0.1"
+description = "Immrax: JAX-based reachability / RTD utilities"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Evanns Morales-Cuadrado" }]
+
+# All runtime + tooling + notebook deps together
+dependencies = [
+  "numpy<2",                      # stick to 1.26.x for ABI safety
+  "jax~=0.6.1",
+  "jaxlib~=0.6.1",
+  "jaxtyping",
+  "equinox",
+  "flax>=0.8.0",
+  "diffrax",
+  "immutabledict",
+  "pypoman==0.5.3",
+  "pycddlib",
+  "shapely",
+  "notebook",                     # Jupyter notebook frontend
+  "jupyter-client>=8.6.3,<9.0",   # matches conda-forge
+  "jupyter-core>=5.8.1,<6.0",     # matches conda-forge
+  "ipykernel",                    # needed to run notebooks in env
+  "pytest",                       # testing (always installed now)
+  "ruff",                         # linting
+  "mypy",                         # type checking
+  "slycot",
+  "control",
+]
+
+[tool.setuptools.packages.find]
+include = ["immrax*"]

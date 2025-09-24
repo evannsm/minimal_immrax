@@ -36,14 +36,9 @@ mamba install compilers cmake pkg-config make ninja colcon-common-extensions ros
 ```
 
 ```bash
-cd clean_immrax-pkg
 
-pip install . # editable installs are nice but for some reason ROS2 has trouble finding the package that way
-
-
-```
-
-```bash
+pip install . # editable installs are nice but for some reason ROS2 has trouble finding the package that way. i'm sure there's some way to work around this but this works for now
 mamba install -c conda-forge matplotlib-base=3.10.6 matplotlib-inline=0.1.7
 pip uninstall -y matplotlib || true
 ```
+

@@ -1,6 +1,6 @@
 # Clean Immrax Package for Basic Use and Clean Dependencies
 
-1. For general mamba environments with immrax:
+# 1. For general mamba environments with immrax:
 
 ```bash
 mamba create -y -n immrax_env python=3.12 -c conda-forge
@@ -12,7 +12,7 @@ pip install -e .
 ````
 
 
-2. For Robostack environments with immrax: 
+# 2. For Robostack environments with immrax: 
 
 
 ```bash

@@ -1,14 +1,17 @@
 # Clean Immrax Package for Basic Use and Clean Dependencies
 
 # 1. For general mamba environments with immrax:
-- First create your mamba environment for this
+- First create your mamba environment for this:
 ```bash
 mamba create -y -n immrax_env python=3.12 -c conda-forge
 ```
-- Secondly, 
+- Secondly we install immrax
 ```bash
 git clone git@github.com:evannsm/minimal_immrax.git && cd minimal_immrax
 pip install . # editable installs are nice but for some reason ROS2 has trouble finding the package that way. i'm sure there's some way to work around this but this works for now
+```
+
+- Lastly, we deal with some matplotlib nonsense:
 mamba install -c conda-forge matplotlib-base=3.10.6 matplotlib-inline=0.1.7
 pip uninstall -y matplotlib || true
 ```
@@ -35,10 +38,14 @@ mamba activate <ros_env_name>
 mamba install compilers cmake pkg-config make ninja colcon-common-extensions rosdep
 ```
 
-- Secondly, 
+- Secondly:
 ```bash
 git clone git@github.com:evannsm/minimal_immrax.git && cd minimal_immrax
 pip install . # editable installs are nice but for some reason ROS2 has trouble finding the package that way. i'm sure there's some way to work around this but this works for now
+```
+
+- Lastly, we deal with some matplotlib nonsense:
+```bash
 mamba install -c conda-forge matplotlib-base=3.10.6 matplotlib-inline=0.1.7
 pip uninstall -y matplotlib || true
 ```

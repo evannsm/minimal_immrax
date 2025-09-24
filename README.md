@@ -12,6 +12,7 @@ pip install . # editable installs are nice but for some reason ROS2 has trouble 
 ```
 
 - Lastly, we deal with some matplotlib nonsense:
+```bash
 mamba install -c conda-forge matplotlib-base=3.10.6 matplotlib-inline=0.1.7
 pip uninstall -y matplotlib || true
 ```

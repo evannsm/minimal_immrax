@@ -3,6 +3,10 @@ data/
 pngs/
 cache/
 
+**/.vscode
+**/__pycache__
+**/log
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
